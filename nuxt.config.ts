@@ -2,4 +2,5 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
     pages: true,
+    css: ["@/assets/scss/default.scss"],
 });
