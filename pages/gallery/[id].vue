@@ -14,6 +14,7 @@ const state = useGeneralState();
 							alt="img"
 							loading="lazy"
 							format="webp"
+							class="hover-image"
 						/>
 					</div>
 					<div class="page-content__block-text">
