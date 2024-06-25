@@ -1,36 +1,37 @@
 body {
-    font-size: 16px;
-    font-family: $font-regular;
-    width: 100%;
-    letter-spacing: -0.02em;
+	font-size: 16px;
+	font-family: $font-regular;
+	width: 100%;
+	letter-spacing: -0.02em;
 }
 
 .l-wrapper {
-    max-width: 1440px;
-    padding: 0 40px;
-    width: 100%;
-    margin: 0 auto;
+	max-width: 1440px;
+	padding: 0 40px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 a.router-link-active {
-    opacity: 0.3;
-    pointer-events: none;
+	opacity: 0.3;
+	pointer-events: none;
 }
 
 .page-content {
-    width: 600px;
-    margin: 0 auto;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .page_black {
-    background: $color-black;
-    color: $color-white;
+	background: $color-black;
+	color: $color-white;
 }
 .page_white {
-    background: $color-white;
-    color: $color-black;
+	background: $color-white;
+	color: $color-black;
 }
 
 pre {
-    color: #00dc82;
+	color: #00dc82;
 }
