@@ -1,10 +1,14 @@
-<script setup></script>
+<script setup>
+const route = useRoute();
+const state = useGeneralState();
+</script>
 
 <template>
-    <div class=" ">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis rerum eius odio velit porro fugit dolorem illo
-        nihil adipisci nulla in, dolor laborum mollitia tempore? Eum accusantium corrupti aperiam quasi?
+    <div :class="state.pageBg">
+        <nuxt-layout name="custom" title="Home" :pageName="route.name">
+            <nuxt-page />
+        </nuxt-layout>
     </div>
-</template> 
+</template>
 
 <style scoped></style>
