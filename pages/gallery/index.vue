@@ -7,7 +7,7 @@ const state = useGeneralState();
 	<div :class="state.pageBg">
 		<nuxt-layout name="custom" title="gallery" :pageName="route.name">
 			<div class="page-content">
-				<nuxt-link v-for="i in 10" :key="i" class="page-content__photo">
+				<nuxt-link v-for="i in 10" :key="i" :to="`/gallery/${i + 1}`" class="page-content__photo">
 					<nuxt-img
 						:src="'https://814a7bc2-0fbd-4f94-9849-82da7e26f1b4.selstorage.ru/placeholders/placeholder_rectangle.webp'"
 						alt="img"
@@ -21,6 +21,11 @@ const state = useGeneralState();
 </template>
 
 <style lang="scss" scoped>
+.page-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
 .page-content__photo {
 	padding-bottom: 16px;
 }
