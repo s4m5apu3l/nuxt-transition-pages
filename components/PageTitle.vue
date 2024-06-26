@@ -1,16 +1,16 @@
 <script setup>
 const props = defineProps({
-    title: String,
+	title: String,
 });
 </script>
 
 <template>
-    <div class="default-title h1">
-        <h1>{{ props.title }}</h1>
-    </div>
+	<div class="default-title h1">
+		<h1>{{ props.title }}</h1>
+	</div>
 </template>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .default-title {
 	height: 100dvh;
 	display: flex;

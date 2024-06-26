@@ -15,9 +15,9 @@ export default defineNuxtConfig({
 	},
 
 	modules: ['@nuxt/image'],
-	// imports: {
-	// 	dirs: ['utils'],
-	// },
+	imports: {
+		dirs: ['animations'],
+	},
 	app: {
 		head: {
 			title: 'gsap scroll',

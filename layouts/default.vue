@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+onMounted(() => {
+	useSmoothScroll();
+});
+</script>
 
 <template>
 	<div id="viewport" class="l-default-layout">

@@ -1,6 +1,13 @@
 <script setup>
 const route = useRoute();
 const state = useGeneralState();
+
+watch(
+	() => state.value.isPreloaderVisible,
+	() => {
+		contentAnimation({ type: 'image', element: '.page-content__photo' });
+	}
+);
 </script>
 
 <template>

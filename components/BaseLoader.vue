@@ -12,7 +12,7 @@ onMounted(() => {
 			persent.value = Math.floor(persent.progress);
 		},
 		onComplete() {
-			state.isPreloaderVisible = false;
+			state.value.isPreloaderVisible = false;
 		},
 	});
 
