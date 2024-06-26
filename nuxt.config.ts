@@ -15,4 +15,14 @@ export default defineNuxtConfig({
 	},
 
 	modules: ['@nuxt/image'],
+	// imports: {
+	// 	dirs: ['utils'],
+	// },
+	app: {
+		head: {
+			title: 'gsap scroll',
+			charset: 'utf-8',
+			viewport: 'width=device-width, initial-scale=1',
+		},
+	},
 });
