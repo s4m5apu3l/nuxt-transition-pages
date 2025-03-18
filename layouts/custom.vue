@@ -15,7 +15,7 @@ watch(
 </script>
 
 <template>
-	<div :class="`page ${props.pageName}`">
+	<div :class="`l-page ${props.pageName}`">
 		<base-header />
 		<div class="l-wrapper">
 			<page-title :title="props.title" />
@@ -23,5 +23,3 @@ watch(
 		</div>
 	</div>
 </template>
-
-<style scoped></style>

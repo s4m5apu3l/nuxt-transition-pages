@@ -2,25 +2,43 @@
 const route = useRoute();
 const state = useGeneralState();
 
-watch(
-	() => state.value.isPreloaderVisible,
-	() => {
+// watch(
+// 	() => state.value.isPreloaderVisible,
+// 	() => {
+// 		contentAnimation({ type: 'image', element: '.page-content__photo' });
+// 	}
+// );
+
+onMounted(() => {
+	setTimeout(() => {
 		contentAnimation({ type: 'image', element: '.page-content__photo' });
-	}
-);
+	}, 200);
+	// contentAnimation({ type: 'image', element: '.page-content__photo' });
+	// watch(
+	// 	() => state.value.isPreloaderVisible,
+	// 	() => {
+	// 		contentAnimation({ type: 'image', element: '.page-content__photo' });
+	// 	}
+	// );
+});
+
+const imgRandom = () => {
+	const randomColor = Math.floor(Math.random() * 666).toString(16);
+	return `https://placehold.co/400x700/${randomColor}/000000`;
+};
 </script>
 
 <template>
 	<div :class="state.pageBg">
 		<nuxt-layout name="custom" title="gallery" :pageName="route.name">
 			<div class="page-content">
-				<nuxt-link v-for="i in 10" :key="i" :to="`/gallery/${i + 1}`" class="page-content__photo hover-image">
-					<nuxt-img
-						:src="'https://814a7bc2-0fbd-4f94-9849-82da7e26f1b4.selstorage.ru/placeholders/placeholder_rectangle.webp'"
-						alt="img"
-						loading="lazy"
-						format="webp"
-					/>
+				<nuxt-link
+					v-for="(_, i) in 10"
+					:key="i"
+					:to="`/gallery/${i + 1}`"
+					class="page-content__photo hover-image"
+				>
+					<nuxt-img :src="`https://placehold.co/400x700/000000/ffffff`" alt="static img" class="img" />
 				</nuxt-link>
 			</div>
 		</nuxt-layout>
@@ -32,5 +50,6 @@ watch(
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 16px;
+	padding-bottom: 60px;
 }
 </style>

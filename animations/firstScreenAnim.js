@@ -10,9 +10,10 @@ export function firstScreenAnimation({ parent }) {
 	// 	opacity: 0,
 	// });
 	tl.from(title, {
-		yPercent: 200,
+		yPercent: 100,
 		opacity: 0,
 		clearProps: 'all',
+		duration: .8,
 	});
 
 	tl.from(

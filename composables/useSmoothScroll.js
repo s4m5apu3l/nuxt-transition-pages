@@ -3,7 +3,7 @@ import Lenis from 'lenis';
 export const useSmoothScroll = () => {
 	const state = useGeneralState();
 	state.value.scrollLenis = new Lenis({
-		duration: 1.2,
+		duration: 0.5,
 		orientation: 'vertical',
 		gestureOrientation: 'vertical',
 		smoothWheel: true,

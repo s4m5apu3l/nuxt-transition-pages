@@ -2,14 +2,27 @@
 const route = useRoute();
 const state = useGeneralState();
 
-watch(
-	() => state.value.isPreloaderVisible,
-	() => {
+onMounted(() => {
+	setTimeout(() => {
 		contentAnimation({ type: 'image', element: '.page-content__block-photo' });
 		contentAnimation({ type: 'text', element: '.page-content__block-text' });
 		contentAnimation({ type: 'text', element: '.page-next' });
-	}
-);
+	}, 200);
+});
+
+// watch(
+// 	() => state.value.isPreloaderVisible,
+// 	() => {
+// 		contentAnimation({ type: 'image', element: '.page-content__block-photo' });
+// 		contentAnimation({ type: 'text', element: '.page-content__block-text' });
+// 		contentAnimation({ type: 'text', element: '.page-next' });
+// 	}
+// );
+
+const imgRandom = () => {
+	const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+	return `https://placehold.co/400x700/${randomColor}/000000`;
+};
 </script>
 
 <template>
@@ -18,14 +31,15 @@ watch(
 			<div class="page-content pb-40">
 				<div v-for="i in 2" :key="i" class="page-content__block">
 					<div class="page-content__block-photo">
-						<nuxt-img
-							:src="'https://814a7bc2-0fbd-4f94-9849-82da7e26f1b4.selstorage.ru/placeholders/placeholder_rectangle.webp'"
+						<!-- <nuxt-img
+							:src="imgRandom"
 							alt="img"
 							loading="lazy"
 							format="webp"
 							class="hover-image img"
 							width="400"
-						/>
+						/> -->
+						<img :src="imgRandom()" :alt="`static img ${i + 1}`" class="hover-image img" />
 					</div>
 					<div class="page-content__block-text">
 						<p class="p1">

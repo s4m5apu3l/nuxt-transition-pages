@@ -2,19 +2,25 @@
 const route = useRoute();
 const state = useGeneralState();
 
-watch(
-	() => state.value.isPreloaderVisible,
-	() => {
+onMounted(() => {
+	setTimeout(() => {
 		contentAnimation({ type: 'text', element: '.page-content__block' });
-	}
-);
+	}, 200);
+});
+
+// watch(
+// 	() => state.value.isPreloaderVisible,
+// 	() => {
+// 		contentAnimation({ type: 'text', element: '.page-content__block' });
+// 	}
+// );
 </script>
 
 <template>
 	<div :class="state.pageBg">
 		<nuxt-layout name="custom" title="about" :pageName="route.name">
 			<div class="page-content" style="padding-bottom: 24px">
-				<div v-for="i in 10" :key="i" class="page-content__block p1">
+				<div v-for="(_, i) in 10" :key="i" class="page-content__block p1">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis assumenda, omnis minima
 					tempora adipisci quidem nostrum nihil inventore quos corporis placeat unde, repellat, mollitia
 					explicabo delectus molestiae amet reprehenderit.
