@@ -18,5 +18,8 @@
         "sass": "^1.77.6",
         "vue": "^3.4.29",
         "vue-router": "^4.3.3"
+    },
+    "devDependencies": {
+        "gh-pages": "^6.3.0"
     }
 }
