@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	devtools: { enabled: true },
-	pages: true,
+	devtools: { enabled: false },
+	// pages: true,
 	css: ['@/assets/scss/default.scss'],
 
 	vite: {
@@ -25,4 +25,11 @@ export default defineNuxtConfig({
 			viewport: 'width=device-width, initial-scale=1',
 		},
 	},
+
+	hooks: {
+		'prerender:routes'({ routes }) {
+			routes.clear();
+		},
+	},
+	ssr: false,
 });
