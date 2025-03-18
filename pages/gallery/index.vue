@@ -21,11 +21,6 @@ onMounted(() => {
 	// 	}
 	// );
 });
-
-const imgRandom = () => {
-	const randomColor = Math.floor(Math.random() * 666).toString(16);
-	return `https://placehold.co/400x700/${randomColor}/000000`;
-};
 </script>
 
 <template>
@@ -38,7 +33,12 @@ const imgRandom = () => {
 					:to="`/gallery/${i + 1}`"
 					class="page-content__photo hover-image"
 				>
-					<nuxt-img :src="`https://placehold.co/400x700/000000/ffffff`" alt="static img" class="img" />
+					<nuxt-img
+						:src="`https://placehold.co/400x700/000000/ffffff`"
+						alt="static img"
+						class="img"
+						style="width: 100%"
+					/>
 				</nuxt-link>
 			</div>
 		</nuxt-layout>
