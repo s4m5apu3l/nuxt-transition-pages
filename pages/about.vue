@@ -7,13 +7,6 @@ onMounted(() => {
 		contentAnimation({ type: 'text', element: '.page-content__block' });
 	}, 200);
 });
-
-// watch(
-// 	() => state.value.isPreloaderVisible,
-// 	() => {
-// 		contentAnimation({ type: 'text', element: '.page-content__block' });
-// 	}
-// );
 </script>
 
 <template>

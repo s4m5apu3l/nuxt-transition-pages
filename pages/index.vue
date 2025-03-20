@@ -5,10 +5,8 @@ const state = useGeneralState();
 
 <template>
     <div :class="state.pageBg">
-        <nuxt-layout name="custom" title="home" :pageName="route.name">
+        <nuxt-layout name="custom" title="iind" :pageName="route.name">
             <nuxt-page />
         </nuxt-layout>
     </div>
 </template>
-
-<style scoped></style>
