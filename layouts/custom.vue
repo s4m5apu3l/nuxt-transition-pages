@@ -1,7 +1,6 @@
 <script setup>
 const props = defineProps({
 	title: String,
-	pageName: String,,
 });
 
 const state = useGeneralState();
