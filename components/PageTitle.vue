@@ -6,7 +6,8 @@ const props = defineProps({
 
 <template>
 	<div class="default-title h1">
-		<h1>{{ props.title }}</h1>
+		<h1 v-if="props.title.includes('iind')">{{ props.title }}<span style="text-transform: lowercase; font-size: 0.5em; font-weight: 400;">inda</span></h1>
+		<h1 v-else>{{ props.title }}</h1>
 	</div>
 </template>
 

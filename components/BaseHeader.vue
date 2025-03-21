@@ -17,9 +17,20 @@ const links = [
 
 <template>
 	<header class="header">
-		<nuxt-link v-for="(link, i) in links" :key="i" :to="link.link" class="hover-fadein" style="padding: 14px 0">
-			{{ link.name }}
-		</nuxt-link>
+		<div class="l-wrapper">
+			<div class="header__inner">
+				<nuxt-link to="/" class="header__logo">iind</nuxt-link>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li v-for="(link, i) in links" :key="i">
+							<nuxt-link :to="link.link" class="hover-fadein" style="padding: 14px 0">
+								{{ link.name }}
+							</nuxt-link>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</header>
 </template>
 
@@ -34,6 +45,29 @@ const links = [
 	align-items: center;
 	gap: 16px;
 	z-index: $z-header;
+	&__logo {
+		font-size: 24px;
+		font-weight: 700;
+		color: $color-white;
+		&.router-link-active {
+			opacity: unset;
+			pointer-events: all;
+		}
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+	&__nav {
+		&-list {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+	}
 }
 
 .page_white .header {
